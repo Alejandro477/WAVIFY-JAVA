@@ -55,4 +55,9 @@ public class PrimaryController {
         alert.setContentText(mensaje);
         alert.showAndWait();
     }
+    
+    @FXML
+    public void IrRegistro() throws IOException{
+        App.setRoot("registro");
+    }
 }

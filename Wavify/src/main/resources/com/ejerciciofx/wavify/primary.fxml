@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.85" prefHeight="482.0" prefWidth="362.0" style="-fx-background-color: #180501;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ejerciciofx.wavify.PrimaryController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.85" prefHeight="425.0" prefWidth="350.0" style="-fx-background-color: #180501;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ejerciciofx.wavify.PrimaryController">
    <children>
       <Label layoutX="105.0" layoutY="140.0" text="Usuario" textFill="#5eabea">
          <font>
@@ -27,17 +27,17 @@
             <Image url="@logo.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnLogin" layoutX="130.0" layoutY="321.0" mnemonicParsing="false" onAction="#handleLogin" style="-fx-background-color: null; -fx-border-color: #09B8C8; -fx-border-radius: 90;" text="Iniciar sesion">
+      <Button fx:id="btnLogin" layoutX="130.0" layoutY="321.0" mnemonicParsing="false" onAction="#handleLogin" style="-fx-background-color: null; -fx-border-color: #09B8C8; -fx-border-radius: 90;" text="Iniciar sesion" textFill="#5eabea">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="7.0" layoutY="393.0" minHeight="12.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="194.0" style="-fx-background-color: null;" text="¿Has olvidado tu contraseña? ">
+      <Button layoutX="7.0" layoutY="393.0" minHeight="12.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="194.0" style="-fx-background-color: null;" text="¿Has olvidado tu contraseña? " textFill="#5eabea">
          <font>
             <Font name="System Bold Italic" size="10.0" />
          </font>
       </Button>
-      <Button layoutX="201.0" layoutY="393.0" minHeight="12.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="113.0" style="-fx-background-color: null;" text="Registrarse">
+      <Button layoutX="201.0" layoutY="393.0" minHeight="12.0" mnemonicParsing="false" onAction="#IrRegistro" prefHeight="32.0" prefWidth="113.0" style="-fx-background-color: null;" text="Registrarse" textFill="#5eabea">
          <font>
             <Font name="System Bold Italic" size="10.0" />
          </font>
