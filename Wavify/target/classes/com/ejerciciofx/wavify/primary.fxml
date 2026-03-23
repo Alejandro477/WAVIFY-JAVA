@@ -20,14 +20,14 @@
             <Font name="System Bold Italic" size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="105.0" layoutY="171.0" prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: null; -fx-border-color: #09B8C8; -fx-border-radius: 90;" />
-      <TextField layoutX="105.0" layoutY="270.0" style="-fx-background-color: null; -fx-border-color: #09B8C8; -fx-border-radius: 90;" />
+      <TextField fx:id="usuarioField" layoutX="105.0" layoutY="171.0" prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: null; -fx-border-color: #09B8C8; -fx-border-radius: 90;" />
+      <TextField fx:id="contrasenaField" layoutX="105.0" layoutY="270.0" style="-fx-background-color: null; -fx-border-color: #09B8C8; -fx-border-radius: 90;" />
       <ImageView fitHeight="132.0" fitWidth="127.0" layoutX="114.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Downloads/ChatGPT%20Image%2011%20mar%202026,%2012_28_52.png" />
+            <Image url="@logo.png" />
          </image>
       </ImageView>
-      <Button layoutX="130.0" layoutY="321.0" mnemonicParsing="false" style="-fx-background-color: null; -fx-border-color: #09B8C8; -fx-border-radius: 90;" text="Iniciar sesion">
+      <Button fx:id="btnLogin" layoutX="130.0" layoutY="321.0" mnemonicParsing="false" onAction="#handleLogin" style="-fx-background-color: null; -fx-border-color: #09B8C8; -fx-border-radius: 90;" text="Iniciar sesion">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>
