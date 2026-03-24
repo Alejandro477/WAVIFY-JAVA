@@ -12,6 +12,8 @@ import java.util.ArrayList;
  */
 public class Cancion {
     private String NombreCancion;
+    private float DuracionCancion; 
+    private String Artista;
     private ArrayList <String> Ruta;
     
     public Cancion (String NombreCancionE){
@@ -24,6 +26,26 @@ public class Cancion {
 
     public void setNombreCancion(String NombreCancion) {
         this.NombreCancion = NombreCancion;
+    }
+
+    public float getDuracionCancion() {
+        return DuracionCancion;
+    }
+
+    public void setDuracionCancion(float DuracionCancion) {
+        this.DuracionCancion = DuracionCancion;
+    }
+
+    public String getArtista() {
+        return Artista;
+    }
+
+    public void setArtista(String Artista) {
+        this.Artista = Artista;
+    }
+
+    public ArrayList<String> getRuta() {
+        return Ruta;
     }
     
     
