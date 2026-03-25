@@ -23,6 +23,7 @@ public class Usuario {
         this.Apellido = ApellidoE;
         this.Usuario = UsuarioE;
         this.Contraseña = ContraseñaE;
+        this.Playlist = new ArrayList<>();
         
     }
 
