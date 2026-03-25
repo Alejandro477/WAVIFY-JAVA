@@ -10,14 +10,14 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.85" prefHeight="471.0" prefWidth="373.0" style="-fx-background-color: #180501;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ejerciciofx.wavify.RegistroController">
    <children>
-      <TextField layoutX="49.0" layoutY="161.0" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: null; -fx-border-color: #09B8C8; -fx-border-radius: 90;" />
-      <Button layoutX="127.0" layoutY="342.0" mnemonicParsing="false" onAction="#finalizarRegistro" prefHeight="31.0" prefWidth="151.0" style="-fx-background-color: null; -fx-border-color: #09B8C8; -fx-border-radius: 90;" text="Registrarse" textFill="#5eabea">
+      <TextField fx:id="Nombre" layoutX="49.0" layoutY="161.0" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: null; -fx-border-color: #09B8C8; -fx-border-radius: 90;" />
+      <Button layoutX="127.0" layoutY="342.0" mnemonicParsing="false" onAction="#registrarUsuario" prefHeight="31.0" prefWidth="151.0" style="-fx-background-color: null; -fx-border-color: #09B8C8; -fx-border-radius: 90;" text="Registrarse" textFill="#5eabea">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>
       </Button>
-      <TextField layoutX="219.0" layoutY="161.0" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: null; -fx-border-color: #09B8C8; -fx-border-radius: 90;" />
-      <TextField layoutX="217.0" layoutY="259.0" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: null; -fx-border-color: #09B8C8; -fx-border-radius: 90;" />
+      <TextField fx:id="Apellido" layoutX="219.0" layoutY="161.0" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: null; -fx-border-color: #09B8C8; -fx-border-radius: 90;" />
+      <TextField fx:id="Contraseña" layoutX="217.0" layoutY="259.0" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: null; -fx-border-color: #09B8C8; -fx-border-radius: 90;" />
       <Label layoutX="60.0" layoutY="132.0" text="Nombre" textFill="#4996d9">
          <font>
             <Font name="System Bold Italic" size="14.0" />
@@ -40,7 +40,7 @@
       </Label>
       <ImageView fx:id="fotoLogo" fitHeight="115.0" fitWidth="139.0" layoutX="127.0" layoutY="27.0">
          <image>
-            <Image url="@logo.png.png" />
+            <Image url="@Logo.png" />
          </image>
       </ImageView>
       <Label layoutX="49.0" layoutY="223.0" text="Usuario" textFill="#4996d9">
@@ -48,7 +48,7 @@
             <Font name="System Bold Italic" size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="51.0" layoutY="259.0" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: null; -fx-border-color: #09B8C8; -fx-border-radius: 90;" />
+      <TextField fx:id="Usuario" layoutX="51.0" layoutY="259.0" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: null; -fx-border-color: #09B8C8; -fx-border-radius: 90;" />
       <Button layoutX="32.0" layoutY="423.0" mnemonicParsing="false" onAction="#VolverAtras" prefHeight="31.0" prefWidth="81.0" style="-fx-background-color: null; -fx-border-color: #09B8C8; -fx-border-radius: 90;" text="Volver" textFill="#5eabea">
          <font>
             <Font name="System Bold Italic" size="14.0" />

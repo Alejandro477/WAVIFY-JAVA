@@ -18,6 +18,7 @@ public class Cancion {
     
     public Cancion (String NombreCancionE){
         this.NombreCancion = NombreCancionE;
+        this.Ruta = new ArrayList<>();
     }
 
     public String getNombreCancion() {

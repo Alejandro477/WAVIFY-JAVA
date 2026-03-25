@@ -1,0 +1,4 @@
+Nombre: Eric
+Apellido: Rodriguez
+Usuario: Ericrc
+Contraseña: 1234
