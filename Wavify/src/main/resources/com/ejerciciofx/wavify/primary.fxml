@@ -27,7 +27,7 @@
             <Image url="@logo.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnLogin" layoutX="130.0" layoutY="321.0" mnemonicParsing="false" onAction="#handleLogin" style="-fx-background-color: null; -fx-border-color: #09B8C8; -fx-border-radius: 90;" text="Iniciar sesion" textFill="#5eabea">
+      <Button fx:id="btnLogin" layoutX="130.0" layoutY="321.0" mnemonicParsing="false" onAction="#iniciarSesion" style="-fx-background-color: null; -fx-border-color: #09B8C8; -fx-border-radius: 90;" text="Iniciar sesion" textFill="#5eabea">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>

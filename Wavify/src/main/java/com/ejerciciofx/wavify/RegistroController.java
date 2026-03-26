@@ -4,6 +4,7 @@ import GestorDeArchivos.GestorDeArchivos;
 import Usuario.Usuario;
 import java.io.IOException;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;    
@@ -45,6 +46,7 @@ public class RegistroController {
 
         if(nombre.isEmpty() || apellido.isEmpty() || usuario.isEmpty() || contraseña.isEmpty()){
             System.out.println("Hay campos vacíos");
+            mostrarAlerta("ALERTA ","Hay campos vacíos");
             return false;
             }
 
@@ -70,8 +72,8 @@ public class RegistroController {
     
         if(gestor.existeUsuario(usuario)){
         System.out.println("El usuario ya existe");
-        //mostrarAlerta("Este Usuario ya existe");
-        return;
+        mostrarAlerta("ERROR ","Este Usuario ya existe");
+        return; 
         }
 
     
@@ -83,8 +85,18 @@ public class RegistroController {
             finalizarRegistro();
         } catch (Exception e) {
             System.out.println("Error al guardar usuario");
+            mostrarAlerta("ERROR ","Al intentar guardar usuario");
         }
     }
+    
+    private void mostrarAlerta(String titulo, String mensaje) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(titulo);
+        alert.setHeaderText(null);
+        alert.setContentText(mensaje);
+        alert.showAndWait();
+    }
+    
     
     
 }
