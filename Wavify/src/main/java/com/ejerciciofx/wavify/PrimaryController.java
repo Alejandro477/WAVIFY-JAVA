@@ -64,7 +64,7 @@ public class PrimaryController {
                 System.out.println("Login correcto");
 
             
-                App.setRoot("pantalla_usuario");
+                App.setRoot("pantalla_cancionesguardadas");
 
             } else {
                 System.out.println("Usuario o contraseña incorrectos");
