@@ -4,6 +4,7 @@ GestorDeArchivos\GestorDeArchivos.class
 com\ejerciciofx\wavify\PrimaryController.class
 com\ejerciciofx\wavify\RegistroController.class
 Usuario\Usuario.class
+com\ejerciciofx\wavify\Pantalla_UsuarioController.class
 SesionActiva\Sesion.class
 module-info.class
 Cancion\Cancion.class
