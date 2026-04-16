@@ -15,11 +15,11 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="674.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ejerciciofx.wavify.Pantalla_CancionesGuardadasController">
    <left>
-      <VBox prefHeight="400.0" prefWidth="96.0" style="width: 200; -fx-background-color: #303030; -fx-border-radius: 15; -fx-background-radius: 10;" BorderPane.alignment="CENTER">
+      <VBox prefHeight="400.0" prefWidth="52.0" style="width: 200; -fx-background-color: #303030; -fx-border-radius: 15; -fx-background-radius: 10;" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="64.0" fitWidth="242.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="64.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Documents/NetBeansProjects/WAVIFY-JAVA/Wavify/src/main/resources/com/ejerciciofx/wavify/Logo.png" />
+                  <Image url="@Logo.png" />
                </image>
             </ImageView>
             <Button alignment="TOP_LEFT" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 10px;" text="Inicio" />
@@ -42,7 +42,7 @@
    <center>
       <VBox prefHeight="384.0" prefWidth="534.0" style="-fx-background-color: linear-gradient(to bottom right, #1a0f3c, #2a1a5e, #0f3460, #00CFFF); -fx-background-radius: 15; -fx-background-insets: 0; -fx-border-radius: 10;" BorderPane.alignment="CENTER">
          <children>
-            <AnchorPane prefHeight="130.0" prefWidth="608.0" style="-fx-background-color: linear-gradient(to right, #2a1a5e, #0f3460); -fx-padding: 10; -fx-border-radius: 15; -fx-background-radius: 15;">
+            <AnchorPane prefHeight="165.0" prefWidth="476.0" style="-fx-background-color: linear-gradient(to right, #2a1a5e, #0f3460); -fx-padding: 10; -fx-border-radius: 15; -fx-background-radius: 15;">
                <children>
                   <Text fill="WHITE" layoutX="135.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Canciones que te gustan" wrappingWidth="315.621826171875">
                      <font>
@@ -51,7 +51,7 @@
                   </Text>
                   <ImageView fitHeight="108.0" fitWidth="96.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../Documents/NetBeansProjects/WAVIFY-JAVA/Wavify/src/main/resources/com/ejerciciofx/wavify/logo2%20(2).png" />
+                        <Image url="@logo2%20(2).png" />
                      </image>
                   </ImageView>
                   <Text fill="WHITE" layoutX="135.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista" />
