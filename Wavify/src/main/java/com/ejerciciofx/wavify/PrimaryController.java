@@ -1,5 +1,7 @@
 package com.ejerciciofx.wavify;
 
+import GestorDeArchivos.GestorDeArchivos;
+import Usuario.Usuario;
 import java.io.*;
 import java.nio.file.*;
 import javafx.fxml.FXML;
@@ -12,40 +14,18 @@ public class PrimaryController {
     @FXML private Button btnLogin;
 
     @FXML
-    private void handleLogin() {
-        String usuario = usuarioField.getText().trim();
-        String contrasena = contrasenaField.getText().trim();
+    
 
-        if (usuario.isEmpty() || contrasena.isEmpty()) {
-            mostrarAlerta("Error", "Por favor rellena todos los campos.");
-            return;
-        }
-
-        if (verificarUsuario(usuario, contrasena)) {
-            mostrarAlerta("Bienvenido", "Inicio de sesión correcto, hola " + usuario + "!");
-           
-        } else {
-            mostrarAlerta("Error", "Usuario o contraseña incorrectos.");
-        }
-    }
-
-    private boolean verificarUsuario(String usuario, String contrasena) {
-        File archivo = new File(System.getProperty("user.home") + "/wavify_usuarios.txt");
-        if (!archivo.exists()) return false;
+     private boolean verificarUsuario(String usuario, String contrasena) {
+        GestorDeArchivos gestor = new GestorDeArchivos();
+        gestor.Comprobarcarpetas(); // asegura que existan las carpetas
 
         try {
-            for (String linea : Files.readAllLines(archivo.toPath())) {
-                String[] partes = linea.split(",");
-                if (partes.length == 2 &&
-                    partes[0].equals(usuario) &&
-                    partes[1].equals(contrasena)) {
-                    return true;
-                }
-            }
-        } catch (IOException e) {
+            return gestor.validarLogin(usuario, contrasena);
+        } catch (Exception e) {
             e.printStackTrace();
+            return false;
         }
-        return false;
     }
 
     private void mostrarAlerta(String titulo, String mensaje) {
@@ -59,5 +39,41 @@ public class PrimaryController {
     @FXML
     public void IrRegistro() throws IOException{
         App.setRoot("registro");
+    }
+    
+    
+    @FXML
+    public void iniciarSesion(){
+        System.out.println("CLICK LOGIN");
+
+        String usuario = usuarioField.getText();
+        String contrasena = contrasenaField.getText();
+
+    
+        if(usuario.isEmpty() || contrasena.isEmpty()){
+            System.out.println("Campos vacíos");
+            mostrarAlerta("ALERTA ","CAMPOS VACIOS");
+            return;
+        }
+
+        GestorDeArchivos gestor = new GestorDeArchivos();
+        gestor.Comprobarcarpetas();
+
+        try {
+            if(gestor.validarLogin(usuario, contrasena)){
+                System.out.println("Login correcto");
+
+            
+                App.setRoot("pantalla_cancionesguardadas");
+
+            } else {
+                System.out.println("Usuario o contraseña incorrectos");
+                mostrarAlerta("ALERTA ","USUARIO O CONTRASEÑA INCORRECTOS");
+            }
+
+        } catch (Exception e) {
+            System.out.println("Error en login");
+            mostrarAlerta("ERROR ","NO SE HA PODIDO INICIAR SESION");
+        }
     }
 }
