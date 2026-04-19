@@ -1,24 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Cancion;
 
-import java.util.ArrayList;
 
-/**
- *
- * @author Aleee
- */
 public class Cancion {
     private String NombreCancion;
     private float DuracionCancion; 
     private String Artista;
-    private ArrayList <String> Ruta;
+    private String Ruta; 
     
-    public Cancion (String NombreCancionE){
+    
+    public Cancion(String NombreCancionE, String RutaE) {
         this.NombreCancion = NombreCancionE;
-        this.Ruta = new ArrayList<>();
+        this.Ruta = RutaE;
+        this.Artista = "Desconocido";
     }
 
     public String getNombreCancion() {
@@ -45,9 +38,11 @@ public class Cancion {
         this.Artista = Artista;
     }
 
-    public ArrayList<String> getRuta() {
+    public String getRuta() {
         return Ruta;
     }
-    
-    
+
+    public void setRuta(String Ruta) {
+        this.Ruta = Ruta;
+    }
 }
