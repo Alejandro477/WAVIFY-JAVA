@@ -6,6 +6,7 @@ package GestorDeArchivos;
 
 
 import Usuario.Usuario;
+import Cancion.Cancion;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.PrintWriter;
@@ -129,9 +130,15 @@ public class GestorDeArchivos {
 
     return usuarioValido && passValida;
 }
-    
-     
-     
-     
-     
+    public ArrayList<Cancion> cargarMusica(){
+        ArrayList<Cancion> lista = new ArrayList<>();
+        File carpetaMusica = new File(RutaCarpeta + "/" + NombreDirectorioRutaMusica);
+        for (File f : carpetaMusica.listFiles()) {
+            if (f.getName().endsWith(".mp3") || f.getName().endsWith(".wav")){
+                Cancion c = new Cancion(f.getName(), f.getPath());
+                lista.add(c);
+            }
+        }
+        return lista;
+    }
 }

@@ -95,9 +95,16 @@ public class Reproductor {
             this.mediaplayer.setVolume(volumennormalizado);
        
     }
-      
-            
     }
+    public void cargarCancionActual() {
+        if (!Listacanciones.isEmpty()) {
+        if (mediaplayer != null) mediaplayer.stop(); 
+        String ruta = Listacanciones.get(Indiceactual).getRuta();
+        
+        javafx.scene.media.Media media = new javafx.scene.media.Media(ruta);
+        this.mediaplayer = new MediaPlayer(media);
+    }
+}    
 }
     
 
