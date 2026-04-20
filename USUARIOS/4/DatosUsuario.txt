@@ -1,0 +1,4 @@
+Nombre: 4
+Apellido: 4
+Usuario: 4
+Contraseña: 4

@@ -1,0 +1,4 @@
+Nombre: 6
+Apellido: 6
+Usuario: 6
+Contraseña: 6

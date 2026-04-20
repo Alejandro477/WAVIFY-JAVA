@@ -52,7 +52,7 @@ public class Reproductor {
         this.mediaplayer = mediaplayer;
     }
     
-    public void reproducir(){
+    public void Reproducircancion(){
         if (this.mediaplayer!=null){
             this.mediaplayer.play();
             
@@ -96,16 +96,21 @@ public class Reproductor {
        
     }
     }
-    public void cargarCancionActual() {
-        if (!Listacanciones.isEmpty()) {
+   public void cargarCancionActual() {
+    if (!Listacanciones.isEmpty()) {
         if (mediaplayer != null) mediaplayer.stop(); 
-        String ruta = Listacanciones.get(Indiceactual).getRuta();
         
-        javafx.scene.media.Media media = new javafx.scene.media.Media(ruta);
+        String ruta = Listacanciones.get(Indiceactual).getRuta();
+       
+        java.io.File archivo = new java.io.File(ruta);
+        String uri = archivo.toURI().toString(); 
+        
+        javafx.scene.media.Media media = new javafx.scene.media.Media(uri);
         this.mediaplayer = new MediaPlayer(media);
     }
-}    
 }
+}    
+
     
 
 

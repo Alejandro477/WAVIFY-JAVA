@@ -25,8 +25,8 @@ public class GestorDeArchivos {
     private String NombreDirectorioRutaCarpetaUsuario;
     
     public GestorDeArchivos (){
-    this.RutaCarpeta = System.getProperty("user.dir") + "/..";
-    this.NombreDirectorioRutaMusica = "MUSICA";
+    this.RutaCarpeta = System.getProperty("user.dir");
+    this.NombreDirectorioRutaMusica = "Musica";
     this.NombreDirectorioRutaCarpetaUsuario = "USUARIOS";
         }
     
@@ -84,7 +84,7 @@ public class GestorDeArchivos {
     }
     
     public boolean validarLogin(String usuario, String contrasena) throws Exception {
-    // ⚠ Cambia esta ruta a la que tienes en tu PC
+    //  Cambia esta ruta a la que tienes en tu PC
     
 
     File carpeta = new File(RutaCarpeta + "/USUARIOS/" + usuario);
@@ -130,15 +130,24 @@ public class GestorDeArchivos {
 
     return usuarioValido && passValida;
 }
-    public ArrayList<Cancion> cargarMusica(){
-        ArrayList<Cancion> lista = new ArrayList<>();
-        File carpetaMusica = new File(RutaCarpeta + "/" + NombreDirectorioRutaMusica);
-        for (File f : carpetaMusica.listFiles()) {
-            if (f.getName().endsWith(".mp3") || f.getName().endsWith(".wav")){
-                Cancion c = new Cancion(f.getName(), f.getPath());
-                lista.add(c);
+    public ArrayList<Cancion> cargarMusica() {
+    ArrayList<Cancion> lista = new ArrayList<>();
+    File carpetaMusica = new File(RutaCarpeta + File.separator + NombreDirectorioRutaMusica);
+    
+    if (carpetaMusica.exists() && carpetaMusica.isDirectory()){
+        File[] archivos = carpetaMusica.listFiles();
+        if (archivos != null) {
+            for (File f : archivos) {
+                if (f.getName().toLowerCase().endsWith(".mp3") || f.getName().toLowerCase().endsWith(".wav")){
+                    Cancion c = new Cancion(f.getName(), f.getAbsolutePath());
+                    lista.add(c);
+                }
             }
         }
-        return lista;
+    } else {
+        System.out.println("ERROR: No se encuentra la carpeta en: " + carpetaMusica.getAbsolutePath());
     }
+    return lista;
+}
+    
 }
