@@ -26,7 +26,7 @@ public class RegistroController {
 
     @FXML
     public void finalizarRegistro() throws IOException {
-        System.out.println("Registro completado. Volviendo al login...");
+        System.out.println("Registro completado. Volviendo al login");
         App.setRoot("primary");
     }
    
@@ -46,7 +46,7 @@ public class RegistroController {
 
         if(nombre.isEmpty() || apellido.isEmpty() || usuario.isEmpty() || contraseña.isEmpty()){
             System.out.println("Hay campos vacíos");
-            mostrarAlerta("ALERTA ","Hay campos vacíos");
+            mostrarAlerta("alerta ","Hay campos vacíos");
             return false;
             }
 
@@ -72,7 +72,7 @@ public class RegistroController {
     
         if(gestor.existeUsuario(usuario)){
         System.out.println("El usuario ya existe");
-        mostrarAlerta("ERROR ","Este Usuario ya existe");
+        mostrarAlerta("error","Este Usuario ya existe");
         return; 
         }
 
@@ -84,19 +84,15 @@ public class RegistroController {
             System.out.println("Usuario creado correctamente");
             finalizarRegistro();
         } catch (Exception e) {
-            System.out.println("Error al guardar usuario");
-            mostrarAlerta("ERROR ","Al intentar guardar usuario");
+            System.out.println("error al guardar usuario");
+            mostrarAlerta("error ","Al intentar guardar usuario");
         }
     }
-    
     private void mostrarAlerta(String titulo, String mensaje) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(titulo);
         alert.setHeaderText(null);
         alert.setContentText(mensaje);
         alert.showAndWait();
-    }
-    
-    
-    
+    }   
 }

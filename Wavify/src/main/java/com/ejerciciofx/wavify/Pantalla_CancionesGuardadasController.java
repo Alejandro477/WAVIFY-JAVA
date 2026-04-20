@@ -6,7 +6,7 @@ import javafx.fxml.FXML;
 public class Pantalla_CancionesGuardadasController {
 
     @FXML
-    private void switchToPrimary() throws IOException {
-        App.setRoot("primary");
-    }
+    private void volverInicio() throws IOException{
+        App.setRoot("inicio");
+}
 }

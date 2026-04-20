@@ -1,0 +1,4 @@
+Nombre: 9
+Apellido: 8
+Usuario: 7
+Contraseña: 6

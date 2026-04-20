@@ -1,0 +1,4 @@
+Nombre: hola
+Apellido: adeu
+Usuario: g
+Contraseña: 1

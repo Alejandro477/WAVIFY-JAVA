@@ -22,12 +22,7 @@
                   <Image url="@Logo.png" />
                </image>
             </ImageView>
-            <Button alignment="TOP_LEFT" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 10px;" text="Inicio" />
-            <Button alignment="TOP_LEFT" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 10px;" text="Buscar" />
-            <Button alignment="TOP_LEFT" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="12.0" prefWidth="70.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 10px;" text="Album">
-               <font>
-                  <Font size="6.0" />
-               </font></Button>
+            <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#volverInicio" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 10px;" text="Inicio" />
             <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" />
             <VBox prefHeight="241.0" prefWidth="191.0">
                <children>
@@ -133,7 +128,6 @@
             <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="231.0">
                <children>
                   <ImageView fitHeight="49.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" />
-                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" />
                </children></HBox>
             <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
@@ -154,7 +148,10 @@
                   </ImageView>
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" />
+               </children></HBox>
          </children></HBox>
    </bottom>
    <top>

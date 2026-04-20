@@ -51,7 +51,7 @@ public class PrimaryController {
 
     
         if(usuario.isEmpty() || contrasena.isEmpty()){
-            System.out.println("Campos vacíos");
+            System.out.println("Campos vacios");
             mostrarAlerta("ALERTA ","CAMPOS VACIOS");
             return;
         }
@@ -62,15 +62,12 @@ public class PrimaryController {
         try {
             if(gestor.validarLogin(usuario, contrasena)){
                 System.out.println("Login correcto");
-
-            
-                App.setRoot("pantalla_cancionesguardadas");
-
+                SesionActiva.Sesion.setUsuarioActual(usuario); 
+                App.setRoot("inicio"); 
             } else {
-                System.out.println("Usuario o contraseña incorrectos");
-                mostrarAlerta("ALERTA ","USUARIO O CONTRASEÑA INCORRECTOS");
+                System.out.println("Usuario o contrasena incorrectos");
+                mostrarAlerta("ALERTA ","USUARIO O CONTRASENA INCORRECTOS");
             }
-
         } catch (Exception e) {
             System.out.println("Error en login");
             mostrarAlerta("ERROR ","NO SE HA PODIDO INICIAR SESION");
